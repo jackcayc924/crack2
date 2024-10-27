@@ -4,7 +4,7 @@
 #include "md5.h"
 
 // Function to hash the given word and return its MD5 hash
-char* tryWord(char *word) 
+char* TryWord(char *word) 
 {
     return md5(word, strlen(word));
 }
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             word[strcspn(word, "\n")] = '\0';
             
             // Hash the word and compare it with the current hash
-            char *generatedHash = tryWord(word);
+            char *generatedHash = TryWord(word);
             if (strcmp(generatedHash, hash) == 0) 
             {
                 // Print the hash and the matching word
